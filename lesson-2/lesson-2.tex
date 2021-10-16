@@ -4,51 +4,74 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{lmodern}
+%\usepackage{lmodern}%
 \usepackage[left=1cm,right=1cm,top=2cm,bottom=2cm]{geometry}
-
 \usepackage[T1,T2A]{fontenc}
 \usepackage[lutf8]{luainputenc}
 \usepackage[english,russian]{babel}
 
-
 \title{Практическое задание к лекции №2}
 \date{15.10.2021}
-
 \begin{document}
 \maketitle
 
 \section{Представьте в виде несократимой рациональной дроби:}
 \begin{enumerate}
-\item[a)] $0.(216)$
+\item[a)] $0.(216)$ \\[6pt]
 $$x = 0.(216)$$
 $$1000x = 216 + x$$
 $$x=\frac{216}{999} = \boxed{\frac{8}{37}}$$
 
-
-\item[б)] $1.0(01)$ \\
-\begin{center}
+\item[б)] $1.0(01)$ \\[6pt]
 $k=$ количество цифр в периоде $= 2$ \\
 $m=$ длина дробной части до начала периода $= 1$ \\
 $y=$ целая часть числа $= 1$ \\
 $a=$ число, составленное из цифр дробной части $= 1$ \\
-$b=$ число, составленное из цифр дробной части до начала периода $= 0$ \\
+$b=$ число, составленное из цифр дробной части до начала периода $= 0$ \\[10pt]
 
-По формуле $y + \dfrac{a-b}{9[k \: times]0[m \: times]}$ \\
-получаем: $1 + \dfrac{1}{990}= \boxed{1\frac{1}{990}}$
-
-
+\begin{center}
+По формуле $y + \dfrac{a-b}{9[k \: times]0[m \: times]}$ \\[10pt]
+получаем: $1 + \dfrac{1}{990}= \boxed{1\dfrac{1}{990}}$
 \end{center}
-
 \end{enumerate}
 
 \section{Проверьте любым способом, являются ли данные логические формулы
 тавтологией:}
 
-\section{Сформулируйте словесно высказывания:}
+\begin{enumerate}
+\item[a)] $(A \lor B)\implies (B \lor \neg A)$ \\[10pt]
+Проверим выражение на тавтологию с помощью поиска контрпримера (это быстрее построения полной таблицы истинности):
+\begin{center}
+Импликация = 0, только если $(A \lor B)=1$ и $(B \lor \neg A)=0$ \\[6pt]
+Выражение $(B \lor \neg A)=0$, только если $B=0$ и $A=1$\\[6pt]
+Подставив значения $B=0$ и $A=1$ в выражение $(A \lor B)=1$, получаем $(1 \lor 0) = 1$\\[6pt]
+Контрпример найден $\therefore$ \boxed{$исходное выражение -- не тавтология$}
 
+\end{center}
 
+\item[б)] $A \implies (A \lor (\neg B \land A))  $ \\[10pt]
+Проверим выражение на тавтологию с помощью поиска контрпримера:
+\begin{center}
+Импликация = 0, только если A=1 и $(A \lor (\neg B \land A))=0$ \\[6pt]
+Подставив значение $A$ во второе выражение, получаем $(1 \lor (\neg B \land 1))=0$ \\[6pt]
+Выражение $(1 \lor (\neg B \land 1)) \neq 0$ при любом $B$, т.к. первый член этой дизъюнкции всегда равен 1. \\[6pt]
+Контрпример не найден $\therefore$ \boxed{$исходное выражение -- тавтология$}
 
+\end{center}
 
+\end{enumerate}
+
+\section{Сформулируйте словесно высказывания:} 
+
+\begin{enumerate}
+\item[a)] $(\neg A \lor B)\implies \neg C$ \\[10pt]
+\boxed{$Если сегодня не светит солнце или сыро, то я не поеду на дачу.$} \\[6pt]
+
+\item[б)] $C \implies (A \lor \neg B)$ \\[10pt]
+\boxed{$Если я поеду на дачу, значит сегодня светит солнце или не сыро.$}
+
+\end{enumerate}
+
+\paragraph{где A: сегодня светит солнце; В: сегодня сыро; С: я поеду на дачу.} 
 
 \end{document}
