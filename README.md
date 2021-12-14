@@ -1,7 +1,5 @@
 ## GeekBrains course "Введение в математический анализ" homeworks
 
-### Lessons 2-11
+### Lessons 2-10
 
 ## WIP
-
-**ToDo:** Дорешать задачи со звездочкой.
